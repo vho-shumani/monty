@@ -72,6 +72,8 @@ int main(int argc, char *argv[])
                     mod(ptr, line_number);
                 else if (strcmp(token, "pchar") == 0)
                     pchar(ptr, line_number);
+                else if (strcmp(token, "pstr") == 0)
+                    pstr(ptr);
                 else if (token[0] == '#')
                     continue;
 				else
