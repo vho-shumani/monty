@@ -1,5 +1,5 @@
 #include "monty.h"
-void push()
+void push(stack_t **stack, int num)
 {
     stack_t *new = (stack_t *)malloc(sizeof(stack_t));
 
@@ -9,17 +9,17 @@ void push()
         exit(EXIT_FAILURE);
     }
     new->n = num;
-    if (head == NULL)
+    if (*stack == NULL)
     {
         new->next = NULL;
-        head = new;
+        *stack = new;
     }
     else
     {
-        new->next = head;
+        new->next = *stack;
         new->prev = NULL;
-        head->prev = new;
-        head = new;
+        (*stack)->prev = new;
+        *stack = new;
     }
     
 }

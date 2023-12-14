@@ -1,7 +1,7 @@
 #include "monty.h"
-void pall()
+void pall(stack_t **stack)
 {
-    stack_t *tmp = head;
+    stack_t *tmp = *stack;
 
     if (tmp != NULL)
     {
