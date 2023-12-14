@@ -70,6 +70,8 @@ int main(int argc, char *argv[])
                     mul(ptr, line_number);
                 else if (strcmp(token, "mod") == 0)
                     mod(ptr, line_number);
+                else if (token[0] == '#')
+                    continue;
 				else
 				{
 					fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
