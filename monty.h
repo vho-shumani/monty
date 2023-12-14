@@ -34,13 +34,15 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-extern int top, line_number; 
+extern int top, line_number, num; 
+extern stack_t *head;
 int _isdigit(char *c);
+int stack_t_len(stack_t *h);
 void push();
-void pall(int *array);
-void pint(int *array);
+void pall();
+void pint();
 void pop();
-void swap(int *array);
-void add(int *array);
+void swap();
+void add();
 
 #endif

@@ -1,11 +1,14 @@
 #include "monty.h"
-void add(int *array)
+void add()
 {
-    if (top < 1)
-    {
-        fprintf(stderr, "L%d: can't add, stack too short", line_number);
-        exit(EXIT_FAILURE);
-    }
-    array[top - 1] = array[top] + array[top - 1];
-    top--;
+	stack_t *tmp = head;
+	if (stack_t_len(head) < 2)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	head = head->next;
+	head->n = head->n + tmp->n;
+	head->prev = NULL;
+	free(tmp);
 }

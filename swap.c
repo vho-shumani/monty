@@ -1,12 +1,15 @@
 #include "monty.h"
-void swap(int *array)
+void swap()
 {
-    int i = array[top];
-    if (top < 1)
+    stack_t *tmp = head;
+    int i = head->n;
+
+    if (stack_t_len(head) < 2)
     {
-        fprintf(stderr, "L%d: can't swap, stack too short", line_number);
+        fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
         exit(EXIT_FAILURE);
     }
-    array[top] = array[top - 1];
-    array[top - 1] = i; 
+    tmp = tmp->next;
+    head->n = tmp->n;
+    tmp->n = i;
 }

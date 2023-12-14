@@ -1,18 +1,14 @@
 #include "monty.h"
-void pall(int *array)
+void pall()
 {
-    int i;
-    if (top == -1)
+    stack_t *tmp = head;
+
+    if (tmp != NULL)
     {
-        fprintf(stderr, "underflow");
-    }
-    else
-    {
-        i = top;
-        while (i >= 0)
+        while (tmp != NULL)
         {
-            printf("%d\n", array[i]);
-            i--;
+            printf("%d\n", tmp->n);
+            tmp = tmp->next; 
         }
     }
 }

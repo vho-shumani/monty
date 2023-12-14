@@ -1,13 +1,25 @@
 #include "monty.h"
-void push(int i, int *array)
+void push()
 {
-    if (top == size - 1)
+    stack_t *new = (stack_t *)malloc(sizeof(stack_t));
+
+    if (new == NULL)
     {
-        fprintf(stderr,"Stack overflow");
+        fprintf(stderr, "Error: malloc failed\n" );
+        exit(EXIT_FAILURE);
+    }
+    new->n = num;
+    if (head == NULL)
+    {
+        new->next = NULL;
+        head = new;
     }
     else
     {
-        top++;
-        array[top] = i;
+        new->next = head;
+        new->prev = NULL;
+        head->prev = new;
+        head = new;
     }
+    
 }

@@ -1,10 +1,22 @@
 #include "monty.h"
 void pop()
 {
-    if (top == -1)
+    stack_t *tmp = head;
+
+    if (head == NULL)
     {
         fprintf(stderr,"L%d: can't pop an empty stack\n", line_number);
         exit(EXIT_FAILURE);
     }
-    top--;
+    if (head->next != NULL)
+    {
+        head = head->next;
+        head->prev = NULL;
+        free(tmp);
+    }
+    else
+    {
+        head = NULL;
+        free(tmp);
+    }
 }
