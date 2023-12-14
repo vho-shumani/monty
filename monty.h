@@ -36,6 +36,7 @@ typedef struct instruction_s
 } instruction_t;
 int _isdigit(char *c);
 extern int top;
+void sub(int *stack, unsigned int line_number);
 void push(int *stack, int line_number);
 void pall(int *stack);
 void pint(int *stack, unsigned int line_number);
