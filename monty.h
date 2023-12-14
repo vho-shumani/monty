@@ -40,6 +40,7 @@ void sub(int *stack, unsigned int line_number);
 void push(int *stack, int line_number);
 void pall(int *stack);
 void pint(int *stack, unsigned int line_number);
+void pchar(int *stack, unsigned int line_number);
 void pop(int *stack, unsigned int line_number);
 void swap(int *stack, unsigned int line_number);
 void add(int *stack, unsigned int line_number);
