@@ -62,6 +62,8 @@ int main(int argc, char *argv[])
 					add(ptr, line_number);
 				else if (strcmp(token, "nop") == 0)
 					continue;
+                else if (strcmp(token, "sub") == 0)
+                    sub(ptr, line_number);
 				else
 				{
 					fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
