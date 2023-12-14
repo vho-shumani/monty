@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	char buff[100], *token, *arg;
 	FILE *fp;
     stack_t *stack;
-    int num, line_number;
+    int num, line_number = 1;
 
 	if (argc != 2)
 	{
