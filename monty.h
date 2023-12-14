@@ -43,5 +43,6 @@ void pint(int *stack, unsigned int line_number);
 void pop(int *stack, unsigned int line_number);
 void swap(int *stack, unsigned int line_number);
 void add(int *stack, unsigned int line_number);
+void divi(int *stack, unsigned int line_number);
 
 #endif
