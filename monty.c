@@ -66,6 +66,8 @@ int main(int argc, char *argv[])
                     sub(ptr, line_number);
                 else if (strcmp(token, "div") == 0)
                     divi(ptr, line_number);
+                else if (strcmp(token, "mul") == 0)
+                    mul(ptr, line_number);
 				else
 				{
 					fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
