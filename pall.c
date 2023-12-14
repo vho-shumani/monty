@@ -1,14 +1,14 @@
 #include "monty.h"
-void pall(stack_t **stack)
+void pall(int *stack)
 {
-    stack_t *tmp = *stack;
+    int i = top;
 
-    if (tmp != NULL)
+    if (top != -1)
     {
-        while (tmp != NULL)
+        while (i >= 0)
         {
-            printf("%d\n", tmp->n);
-            tmp = tmp->next; 
+            printf("%d\n", stack[i]);
+            i--;
         }
     }
 }

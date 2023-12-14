@@ -1,4 +1,6 @@
 #include "monty.h"
+#define size 1000
+int top = -1;
 int _isdigit(char *c)
 {
 	for (; *c != '\0'; c++)
@@ -13,7 +15,8 @@ int main(int argc, char *argv[])
 {
 	char buff[100], *token, *arg;
 	FILE *fp;
-    stack_t *stack;
+    int array[size];
+    int *ptr = array;
     int num, line_number = 1;
 
 	if (argc != 2)
@@ -39,7 +42,7 @@ int main(int argc, char *argv[])
 					if (arg != NULL && _isdigit(arg) == 1)
 					{
 						num = atoi(arg);
-						push(&stack, num);
+						push(ptr, num);
 					}
 					else
 					{
@@ -48,15 +51,15 @@ int main(int argc, char *argv[])
 					}
 				}
 				else if (strcmp(token, "pall") == 0)
-					pall(&stack);
+					pall(ptr);
 				else if (strcmp(token, "pint") == 0)
-					pint(&stack, line_number);
+					pint(ptr, line_number);
 				else if (strcmp(token, "pop") == 0)
-					pop(&stack, line_number);
+					pop(ptr, line_number);
 				else if (strcmp(token, "swap") == 0)
-					swap(&stack, line_number);
+					swap(ptr, line_number);
 				else if (strcmp(token, "add") == 0)
-					add(&stack, line_number);
+					add(ptr, line_number);
 				else if (strcmp(token, "nop") == 0)
 					continue;
 				else

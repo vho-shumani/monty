@@ -1,15 +1,13 @@
 #include "monty.h"
-void swap(stack_t **stack, unsigned int line_number)
+void swap(int *stack, unsigned int line_number)
 {
-    stack_t *tmp = *stack;
-    int i = (*stack)->n;
+    int i = stack[top];
 
-    if (stack_t_len(tmp) < 2)
+    if (top < 1)
     {
         fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
         exit(EXIT_FAILURE);
     }
-    tmp = tmp->next;
-    (*stack)->n = tmp->n;
-    tmp->n = i;
+    stack[top] = stack[top-1];
+    stack[top - 1] = i;
 }

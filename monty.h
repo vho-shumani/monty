@@ -35,12 +35,12 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 int _isdigit(char *c);
-int stack_t_len(stack_t *h);
-void push(stack_t **stack, int line_number);
-void pall(stack_t **stack);
-void pint(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
-void swap(stack_t **stack, unsigned int line_number);
-void add(stack_t **stack, unsigned int line_number);
+extern int top;
+void push(int *stack, int line_number);
+void pall(int *stack);
+void pint(int *stack, unsigned int line_number);
+void pop(int *stack, unsigned int line_number);
+void swap(int *stack, unsigned int line_number);
+void add(int *stack, unsigned int line_number);
 
 #endif

@@ -1,10 +1,10 @@
 #include "monty.h"
-void pint(stack_t **stack, unsigned int line_number)
+void pint(int *stack, unsigned int line_number)
 {
-    if (*stack == NULL)
+    if (top == -1)
     {
         fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
         exit(EXIT_FAILURE);
     }
-    printf("%d\n", (*stack)->n);
+    printf("%d\n", stack[top]);
 }
