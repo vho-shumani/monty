@@ -48,5 +48,6 @@ void divi(int *stack, unsigned int line_number);
 void mul(int *stack, unsigned int line_number);
 void mod(int *stack, unsigned int line_number);
 void pstr(int *stack);
+void rotl(int *stack);
 
 #endif

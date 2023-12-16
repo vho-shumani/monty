@@ -74,6 +74,8 @@ int main(int argc, char *argv[])
                     pchar(ptr, line_number);
                 else if (strcmp(token, "pstr") == 0)
                     pstr(ptr);
+				else if (strcmp(token, "rotl") == 0)
+                    rotl(ptr);
                 else if (token[0] == '#')
                     continue;
 				else
