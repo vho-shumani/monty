@@ -8,5 +8,4 @@ void rotl(int *stack)
         stack[x] = stack[x - 1];
     }
     stack[0] = i;
-
 }

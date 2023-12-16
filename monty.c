@@ -76,6 +76,8 @@ int main(int argc, char *argv[])
                     pstr(ptr);
 				else if (strcmp(token, "rotl") == 0)
                     rotl(ptr);
+				else if (strcmp(token, "rotr") == 0)
+                    rotr(ptr);
                 else if (token[0] == '#')
                     continue;
 				else
